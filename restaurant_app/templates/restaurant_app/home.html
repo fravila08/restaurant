@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href="{% static 'css/main.css' %}">
+        <title>Restaurant</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="{% url 'home' %}"> Restaurant </a></h1>
+            <nav>
+                <a href="#">Menu Items</a>
+                <a href="#">Recipes</a>
+                <a href="{% url 'ingredients' %}">Inventory</a>
+                <a href="#">Purchase History</a>
+                <a href="{% url 'ingredientcreate' %}">New Ingredient</a>
+            </nav>
+        </header>
+        <main>
+            <h3>Welcome to our Restaurant</h3>
+            {%block content%}{%endblock%}
+    </body>
+</html>

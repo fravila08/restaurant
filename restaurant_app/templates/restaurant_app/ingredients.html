@@ -1,0 +1,12 @@
+{% extends 'restaurant_app/home.html' %}
+{% block content %}
+<ul>
+    {% for item in  product%}
+    <li> {{item.name}}<ul>
+        <li>Price: ${{item.price}}</li>
+        <li>Quantity: {{item.quantity}}</li>
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
